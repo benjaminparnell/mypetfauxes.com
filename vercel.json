@@ -1,0 +1,3 @@
+{
+  "rewrites": [{ "source": "/epk", "destination": "/epk.pdf" }]
+}
