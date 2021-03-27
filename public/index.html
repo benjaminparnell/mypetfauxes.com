@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Pet Fauxes</title>
+
+    <style>
+      /* Box sizing rules */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      /* Remove default padding */
+      ul[class],
+      ol[class] {
+        padding: 0;
+      }
+
+      /* Remove default margin */
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      p,
+      ul[class],
+      ol[class],
+      li,
+      figure,
+      figcaption,
+      blockquote,
+      dl,
+      dd {
+        margin: 0;
+      }
+
+      /* Set core body defaults */
+      body {
+        min-height: 100vh;
+        scroll-behavior: smooth;
+        text-rendering: optimizeSpeed;
+        line-height: 1.5;
+      }
+
+      /* Remove list styles on ul, ol elements with a class attribute */
+      ul[class],
+      ol[class] {
+        list-style: none;
+      }
+
+      /* A elements that don't have a class get default styles */
+      a:not([class]) {
+        text-decoration-skip-ink: auto;
+      }
+
+      /* Make images easier to work with */
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      /* Natural flow and rhythm in articles by default */
+      article > * + * {
+        margin-top: 1em;
+      }
+
+      /* Inherit fonts for inputs and buttons */
+      input,
+      button,
+      textarea,
+      select {
+        font: inherit;
+      }
+
+      /* Remove all animations and transitions for people that prefer not to see them */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+
+      html,
+      body {
+        background-color: #fff45d;
+      }
+
+      @font-face {
+        font-family: "Russo One";
+        src: url("fonts/Russo_One.ttf");
+        font-display: swap;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 15px;
+        border-bottom: 3px solid #000;
+      }
+
+      .logo {
+        font-family: "Russo One";
+        color: #ff51ee;
+        font-size: 42px;
+        text-align: center;
+        width: 100%;
+        text-shadow: 2px 2px #50DDFF;
+      }
+
+      .main {
+        height: 100%;
+      }
+
+      .wrapper {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      .shows {
+        width: 100%;
+        height: 100%;
+        display: flex;
+      }
+
+      .show {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .show:first-child {
+        border-right: 3px solid #000;
+      }
+
+      .show__info {
+        height: 300px;
+      }
+
+      .show__title, .show__city {
+        font-family: "Russo One";
+        color: #ff51ee;
+        text-shadow: 2px 2px #50DDFF;
+      }
+
+      .show__title {
+        font-size: 42px;
+      }
+
+      .show__city {
+        font-size: 32pt;
+      }
+
+      .show__date {
+        font-family: "Russo One";
+        margin-bottom: 25px;
+        font-size: 30px;
+      }
+
+      .show__link {
+        display: inline-block;
+        text-align: center;
+        font-size: 25pt;
+        font-family: "Russo One";
+        padding: 15px 50px;
+        border: 3px solid #000;
+        color: #000;
+        text-decoration: none;
+        background-color: #ff51ee;
+      }
+
+      .show__link:hover {
+        text-shadow: 2px 2px #50DDFF;
+        box-shadow: 2px 2px #50DDFF;
+      }
+
+      @media only screen and (max-width: 1024px)  {
+        .shows {
+          flex-direction: column;
+        }
+
+        .show:first-child {
+          border-right: none;
+          border-bottom: 3px solid #000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="nav">
+        <h1 class="logo">My Pet Fauxes</h1>
+      </div>
+      <div class="main">
+        <div class="shows">
+          <div class="show">
+            <div class="show__info">
+              <h2 class="show__city">Leeds</h2>
+              <h3 class="show__title">The Wardrobe</h3>
+              <h3 class="show__date">20th May 2021</h3>
+              <a
+                class="show__link"
+                href="https://www.lunatickets.co.uk/event/my-pet-fauxes/the-wardrobe/1810852"
+                >Buy tickets</a
+              >
+            </div>
+          </div>
+          <div class="show">
+            <div class="show__info">
+              <h2 class="show__city">Nottingham</h2>
+              <h3 class="show__title">Metronome</h3>
+              <h3 class="show__date">4th June 2021</h3>
+              <a
+                class="show__link"
+                href="https://www.gigantic.com/deco-tickets/nottingham-metronome/2021-01-29-18-30?utm_source=Metronome_Deco&utm_medium=Metronome_Listing&utm_campaign=Metronome_Deco_Listing"
+                >Buy tickets</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
