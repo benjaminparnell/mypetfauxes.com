@@ -137,7 +137,7 @@
         text-align: center;
       }
 
-      .show:first-child {
+      .show:not(:last-child) {
         border-right: 3px solid #000;
       }
 
@@ -183,11 +183,16 @@
       }
 
       @media only screen and (max-width: 1024px)  {
+        .show__info {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+
         .shows {
           flex-direction: column;
         }
 
-        .show:first-child {
+        .show:not(:last-child) {
           border-right: none;
           border-bottom: 3px solid #000;
         }
@@ -221,6 +226,18 @@
               <a
                 class="show__link"
                 href="https://www.gigantic.com/deco-tickets/nottingham-metronome/2021-01-29-18-30?utm_source=Metronome_Deco&utm_medium=Metronome_Listing&utm_campaign=Metronome_Deco_Listing"
+                >Buy tickets</a
+              >
+            </div>
+          </div>
+          <div class="show">
+            <div class="show__info">
+              <h2 class="show__city">Nottingham</h2>
+              <h3 class="show__title">Rescue Rooms</h3>
+              <h3 class="show__date">17th July 2021</h3>
+              <a
+                class="show__link"
+                href="http://alt.tkts.me/tl/42in"
                 >Buy tickets</a
               >
             </div>
